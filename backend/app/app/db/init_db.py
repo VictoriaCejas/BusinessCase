@@ -15,3 +15,4 @@ def init_db(db: Session) -> None:
     # the tables un-commenting the next line
     Base.metadata.create_all(bind=engine)
 
+

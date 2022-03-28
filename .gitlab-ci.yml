@@ -41,14 +41,14 @@ deploy-stag:
   stage: deploy
   script: 
     - >
-      DOMAIN=stag.bussinescase.com
-      TRAEFIK_TAG=stag.bussinescase.com
-      STACK_NAME=stag-bussinescase-com
+      DOMAIN=stag.businesscase.com
+      TRAEFIK_TAG=stag.businesscase.com
+      STACK_NAME=stag-businesscase-com
       TAG=stag
       sh ./scripts/deploy.sh
   environment:
     name: staging
-    url: https://stag.bussinescase.com
+    url: https://stag.businesscase.com
   only:
     - master
   tags:
@@ -59,14 +59,14 @@ deploy-prod:
   stage: deploy
   script:
     - >
-      DOMAIN=bussinescase.com
-      TRAEFIK_TAG=bussinescase.com
-      STACK_NAME=bussinescase-com
+      DOMAIN=businesscase.com
+      TRAEFIK_TAG=businesscase.com
+      STACK_NAME=businesscase-com
       TAG=prod
       sh ./scripts/deploy.sh
   environment:
     name: production
-    url: https://bussinescase.com
+    url: https://businesscase.com
   only:
     - production
   tags:

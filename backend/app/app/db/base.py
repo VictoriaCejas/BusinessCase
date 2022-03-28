@@ -2,5 +2,5 @@
 # imported by Alembic
 from app.db.base_class import Base  # noqa
 from app.models.item import Item  # noqa
-from app.models.vacant import Vacant
-from app.models.business.import Business
+from app.models.business import Business
+from app.models.vacancy import Vacancy
