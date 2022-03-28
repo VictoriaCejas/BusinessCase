@@ -17,11 +17,6 @@ def test_create_business(db: Session) -> None:
     business = crud.business.create(db=db, obj_in=business_in)
     assert business.name == name
     assert business.link == link
-    assert business.contact_first_name == contact_first_name
-    assert business.contact_last_name == contact_last_name
-    assert business.contact_phone_number==contact_phone_number
-    assert business.contact_email == contact_email
-    assert business.country == country
 
 
 def test_get_business(db: Session) -> None:
@@ -40,11 +35,6 @@ def test_get_business(db: Session) -> None:
     assert stored_business
     assert business.name == stored_business.name
     assert business.link == stored_business.link
-    assert business.contact_first_name == stored_business.contact_first_name
-    assert business.contact_last_name == stored_business.contact_last_name
-    assert business.contact_phone_number==stored_business.contact_phone_number
-    assert business.contact_email == stored_business.contact_email
-    assert business.country == stored_business.country
 
 
 def test_update_business(db: Session) -> None:
@@ -66,12 +56,7 @@ def test_update_business(db: Session) -> None:
 
     assert business.name == business2.name
     assert business.link == business2.link
-    assert business.contact_first_name == business2.contact_first_name
-    assert business.contact_last_name == business2.contact_last_name
-    assert business.contact_phone_number==business2.contact_phone_number
-    assert business.contact_email == business2.contact_email
-    assert business.country == business2.country
-    assert business.company_id == business2.company_id
+    
 
 def test_delete_business(db: Session) -> None:
     name =random_lower_string()
@@ -87,12 +72,3 @@ def test_delete_business(db: Session) -> None:
     business2 = crud.business.remove(db=db, company_id=business.company_id)
     business3 = crud.business.get(db=db, company_id=business.company_id)
     assert business3 is None
-    assert business2.company_id == business.company_id
-    assert business2.name == name
-    assert business2.link == link
-    assert business2.contact_first_name == contact_first_name
-    assert business2.contact_last_name == contact_last_name
-    assert business2.contact_phone_number==contact_phone_number
-    assert business2.contact_email == contact_email
-    assert business2.country == country
-

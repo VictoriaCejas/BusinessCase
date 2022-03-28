@@ -2,8 +2,11 @@ from aifc import Error
 from asyncio.log import logger
 from cmath import log
 from datetime import date
+import pdb
+from re import I
 from sqlite3 import IntegrityError
 from tkinter import E
+from turtle import pd
 from typing import Any, List
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -12,6 +15,7 @@ from sqlalchemy.orm import Session
 from app import crud, models, schemas
 from app.api import deps
 from sqlalchemy import exc
+from pdb import set_trace
 
 
 router = APIRouter()

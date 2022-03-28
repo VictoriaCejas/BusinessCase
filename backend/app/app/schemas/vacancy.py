@@ -6,13 +6,13 @@ from pydantic import BaseModel
 
 # Shared properties
 class VacancyBase(BaseModel):
-    company_id: int
-    salary: float
-    max_experience: int
-    min_experience: int
+    company_id: Optional[int]
+    salary: Optional[float]
+    max_experience: Optional[int]
+    min_experience: Optional[int]
     vacancy_link: Optional[str] = None
-    skills: str
-    position_name : str
+    skills: Optional[str]
+    position_name : Optional[str]
 
 
 # Properties to receive on item creation

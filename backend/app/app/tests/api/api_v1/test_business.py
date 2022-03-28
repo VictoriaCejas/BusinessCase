@@ -25,7 +25,6 @@ def test_create_business(
     assert content["country"] == data["country"]
     assert "company_id" in content
 
-
 def test_get_business(
     client: TestClient, db: Session
 ) -> None:
