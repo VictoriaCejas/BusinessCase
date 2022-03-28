@@ -21,13 +21,3 @@ def test_celery(
     celery_app.send_task("app.worker.test_celery", args=[msg.msg])
     return {"msg": "Word received"}
 
-
-@router.post("/test-email/", response_model=schemas.Msg, status_code=201)
-def test_email(
-    email_to: EmailStr,
-) -> Any:
-    """
-    Test emails.
-    """
-    send_test_email(email_to=email_to)
-    return {"msg": "Test email sent"}

@@ -6,13 +6,13 @@ from pydantic import BaseModel, EmailStr, Field
 
 # Shared properties
 class BusinessBase(BaseModel):
-    name: str
-    link: str
-    contact_first_name: str
-    contact_last_name: str
-    contact_phone_number: str
-    contact_email: EmailStr
-    country: str
+    name: Optional[str]
+    link: Optional[str]
+    contact_first_name: Optional[str]
+    contact_last_name: Optional[str]
+    contact_phone_number: Optional[str]
+    contact_email: Optional[EmailStr]
+    country: Optional[str]
 
 
 # Properties to receive on item creation
@@ -22,7 +22,7 @@ class BusinessCreate(BusinessBase):
     contact_first_name: str
     contact_last_name: str
     contact_phone_number: str
-    contact_email: str
+    contact_email: EmailStr
     country: str
 
 
@@ -40,7 +40,7 @@ class BusinessInDBBase(BusinessBase):
     contact_first_name: str
     contact_last_name: str
     contact_phone_number: str
-    contact_email: str
+    contact_email: EmailStr
     country: str
 
     class Config:
