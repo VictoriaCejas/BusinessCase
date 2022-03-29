@@ -116,7 +116,6 @@ toml==0.10.2
 tomlkit==0.10.0
 typing-extensions==4.1.1
 ujson==4.3.0
-unattended-upgrades==0.1
 urllib3==1.26.5
 uvicorn==0.15.0
 uvloop==0.16.0
