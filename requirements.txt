@@ -1,4 +1,4 @@
-alembic==1.6.5.dev0
+alembic==1.6.5
 anyio==3.5.0
 appdirs==1.4.4
 apturl==0.5.2
